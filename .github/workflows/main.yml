@@ -44,7 +44,7 @@ jobs:
 
     - name: Run the API and Postman's tests
       run: |
-        run https://www.getpostman.com/collections/141bb309253b3522ee05
+        newman run https://www.getpostman.com/collections/141bb309253b3522ee05
         kill -9 `lsof -i:5000 -t`
       env:
         FLASK_ENV: development
